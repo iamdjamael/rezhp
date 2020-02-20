@@ -18,6 +18,21 @@
 		}
 	}
 	?>
+	<script>
+	function validasiLogin() {
+		if( document.loginform.username.value == "" ) {
+		    alert( "Username harus di isi!" );
+		    document.loginform.username.focus() ;
+		    return false;
+		}
+         	if( document.loginform.password.value == "" ) {
+		    alert( "Password harus di isi!" );
+		    document.loginform.password.focus() ;
+		    return false;
+		}
+	return( true );
+	}
+	</script>
 	<br/>
 	<br/>
 	<form method="post" action="login.php">
