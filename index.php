@@ -4,7 +4,7 @@
 	<title>TUGAS AKHIR HONEYPOT</title>
 </head>
 <body>
-	<h2>TUGAS AKHIR HONEYPOT</h2>
+	<h2>Login - Server Utama</h2>
 	<br/>
 	<!-- cek pesan notifikasi -->
 	<?php 
@@ -19,23 +19,23 @@
 	}
 	?>
 	<script>
-	function validasiLogin() {
-		if( document.loginform.username.value == "" ) {
-		    alert( "Username harus di isi!" );
-		    document.loginform.username.focus() ;
-		    return false;
-		}
+		function validasiLogin() {
+			if( document.loginform.username.value == "" ) {
+            alert( "Username harus di isi!" );
+            document.loginform.username.focus() ;
+            return false;
+         	}
          	if( document.loginform.password.value == "" ) {
-		    alert( "Password harus di isi!" );
-		    document.loginform.password.focus() ;
-		    return false;
+            alert( "Password harus di isi!" );
+            document.loginform.password.focus() ;
+            return false;
+			}
+		return( true );
 		}
-	return( true );
-	}
 	</script>
 	<br/>
 	<br/>
-	<form method="post" action="login.php">
+	<form name="loginform" method="post" action="login.php" onsubmit="return validasiLogin()">
 		<table>
 			<tr>
 				<td>Username</td>
